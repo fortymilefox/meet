@@ -6,7 +6,10 @@ import { extractLocations } from '../api';
 
 describe('<CitySearch /> component', () => {
   let CitySearchWrapper;
-  beforeAll
+  beforeAll(() => {
+    CitySearchWrapper = shallow(<CitySearch />);
+  });
+  
   test('render text input', () => {
     const CitySearchWrapper = shallow(<CitySearch />);
     expect(CitySearchWrapper.find('.city')).toHaveLength(1);
